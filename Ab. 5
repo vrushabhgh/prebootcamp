@@ -1,0 +1,20 @@
+const readline = require('readline');
+const inp = readline.createInterface({input: process.stdin});
+const userInput = [];
+inp.on("line", (data) =>
+{userInput.push(data);
+    
+});
+inp.on("close", () => {//start-hereconsole.log(userInput);//end-here});
+   var a = userInput[0];
+  var c=2*Math.PI*a;
+  d= Math.round(c * 100.0) / 100.0;
+  if(a <= -1)
+   {console.log("Error");
+   }
+   else
+   { 
+       console.log(d);
+      
+   }
+   });
