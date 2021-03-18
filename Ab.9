@@ -1,0 +1,17 @@
+const readline = require('readline');
+const inp = readline.createInterface({input: process.stdin});
+const userInput = [];
+inp.on("line", (data) =>
+{userInput.push(data);
+    
+});
+inp.on("close", () => {//
+
+   var int =userInput[0];
+var c=int*1;
+var d=int*2;
+var f=int*3;
+var arr=[c,d,f];
+console.log(arr[0],arr[1],arr[2]);
+   
+});
