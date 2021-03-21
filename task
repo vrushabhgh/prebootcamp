@@ -20,4 +20,15 @@ console.log(sum);
 
 output:--178
 
+Convert all the strings to title caps in a string array
+
+const names = ["ali", "atta", "alex", "john"];
+
+const lowercased = names.map(function(ind) { 
+    return ind[0].toUpperCase()+ ind.substr(1).toLowerCase();
+    }
+);
+console.log(lowercased);
+
+output:---[ 'Ali', 'Atta', 'Alex', 'John' ]
 
