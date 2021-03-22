@@ -58,7 +58,11 @@ console.log(primearray);
 
   output:--[ 2, 3, 5, 7, 11, 13, 17, 19 ]
   
-  6)
+  6)The first response that a client receives on an HTTP GET request is often not the fully rendered page.
+  Instead, it contains links to additional resources needed by the requested page. 
+  The client discovers that the full rendering of the page requires these additional resources from the server only after it downloads the page.
+  Because of this, the client will have to make additional requests to retrieve these resources. 
+  In HTTP/1.0, the client had to break and remake the TCP connection with every new request, a costly affair in terms of both time and resources.
 
 
 
