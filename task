@@ -37,10 +37,10 @@ output:---[ 'Ali', 'Atta', 'Alex', 'John' ]
  let arr = [10,20,20,30,30,40,50,50];  
   let  uniqueArray = arr.filter(function(item, pos) {
     return arr.indexOf(item) == pos;
-    
+    console.log(uniqueArray);
     output:--[ 10, 20, 30, 40, 50 ]
 })
-console.log(uniqueArray);
+
 
 5)Return all the prime numbers in an array
 
