@@ -24,7 +24,7 @@
 
 
 
-1)copy by value:
+2)copy by value:
 *The value is actually copied; there are two distinct, independent copies. 
 *Primitive values in JavaScript will not be shared between multiple variables . 
 Even if you set the variables equal to each other. Every variable representing a primitive value is guaranteed to belong to a unique memory location.
@@ -43,3 +43,19 @@ So you don’t need to reassign a to point to a different memory address.
 *Only a reference to the value is copied. If the value is modified through the new reference, that change is also visible through the original reference.
 *When you assign a variable, it is a reference to an object not the object itself. When you copy an object b = a both variables will point to the same address.
 This behavior is called copy by reference value.
+
+
+3) copy by value a composite datatype (array+objects).
+1)1. Using Spread:
+Spread operator allows an iterable to expand in places where 0+ arguments are expected.
+It is mostly used in the variable array where there is more than 1 values are expected. 
+It allows us the privilege to obtain a list of parameters from an array.Using spread will clone your object. Note this will be a shallow copy.
+
+2. Using Object.assign():
+The Object.assign() method copies all enumerable own properties from one or more source objects to a target object. 
+It returns the target object. Note this will be a shallow copy
+
+3. Using JSON.parse() and JSON.stringify():
+The JSON object, available in all modern browsers, has two useful methods to deal with JSON-formatted content: parse and stringify.
+JSON.parse() takes a JSON string and transforms it into a JavaScript object.
+JSON.stringify() takes a JavaScript object and transforms it into a JSON string.Using JSON.parse() and JSON.stringify() for copy performs deep copy .
