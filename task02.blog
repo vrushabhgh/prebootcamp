@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var request= new XMLHttpRequest();
+        request.open('GET', 'https://restcountries.eu/rest/v2/all',true);
+        request.send();
+        request.onload=function(){
+            var data=JSON.parse(this.response);
+            data.forEach((country) => {
+                console.log(country.name);
+            
+            });
+        } 
+   </script>    
+</body>
+</html>
+
+
+
+1)copy by value:
+*The value is actually copied; there are two distinct, independent copies. 
+*Primitive values in JavaScript will not be shared between multiple variables . 
+Even if you set the variables equal to each other. Every variable representing a primitive value is guaranteed to belong to a unique memory location.
+
+*This means none of the variables will ever point to the same memory address. 
+It is also important that the value itself is stored in a physical memory location.
+
+*In our example when we declare b = a, b will point to a different memory address with the same ‘string’ value right away. 
+So you don’t need to reassign a to point to a different memory address.
+
+*This is called copied by value since you have no access to the memory address only to the value.
+
+
+
+2)copy By Reference :
+*Only a reference to the value is copied. If the value is modified through the new reference, that change is also visible through the original reference.
+*When you assign a variable, it is a reference to an object not the object itself. When you copy an object b = a both variables will point to the same address.
+This behavior is called copy by reference value.
